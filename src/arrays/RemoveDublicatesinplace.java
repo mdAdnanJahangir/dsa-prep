@@ -3,8 +3,7 @@ import java.util.HashSet;
 
 
     public class RemoveDublicatesinplace  {
-
-        private static class Solution
+         class Solution
         {
 
             public static int brute(int[] nums) {

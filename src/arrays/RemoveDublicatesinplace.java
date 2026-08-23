@@ -6,8 +6,7 @@ import java.util.HashSet;
          class Solution
         {
 
-            public static int optimal (int [] nums)
-            {
+            public static int optimal (int [] nums) {
                 int x =0 ;
                 for(int i =1;i<nums.length;i++)
                 {

@@ -49,6 +49,10 @@ public class LinkedListt {
 
 
     public void deleteAtHead(){
+        if(head == null){
+            System.out.println("nothing there ");
+        };
+        head = head.next;
 
 
     }

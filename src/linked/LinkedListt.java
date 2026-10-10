@@ -1,20 +1,20 @@
 package linked;
 
 
+import arrays.LeftRotateByOnePlace;
+
 public class LinkedListt {
 
-   public class Node {
-        int val ;
-        Node next;
 
-        Node(int val ){
-            this.val = val;
-
-        }
-
-    }
 
     Node head ;
+
+    public Node rh(){
+        System.out.println();
+        System.out.println(" value of head = " +  head.val);
+        return head ;
+
+    }
 
     public void  addAtHead( int val) {
 

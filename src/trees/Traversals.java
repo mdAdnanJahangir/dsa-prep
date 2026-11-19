@@ -27,6 +27,17 @@ public class Traversals {
     }
 
 
+    public static void postorder(Tree.TreeNode node){
+        if(node == null ) return;
+
+        inorder(node.left); // leftnode ab node ban gaya .left right bus travel karne ke liye hai
+        inorder(node.right);
+        System.out.println(node.val);
+
+
+
+    }
+
 
 
 

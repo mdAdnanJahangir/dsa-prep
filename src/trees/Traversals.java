@@ -74,6 +74,48 @@ public class Traversals {
     }
 
 
+    public static  List<List<Integer>> zigzag (Tree.TreeNode root){
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) return result;
+
+        Queue<Tree.TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        boolean leftToRight = true; // Flag to track direction
+
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            List<Integer> currentLevel = new ArrayList<>();
+
+            for (int i = 0; i < levelSize; i++) {
+                Tree.TreeNode currentNode = queue.poll();
+
+                // Always add normally during the queue extraction
+                currentLevel.add(currentNode.val);
+
+                // Standard child additions
+                if (currentNode.left != null) {
+                    queue.offer(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    queue.offer(currentNode.right);
+                }
+            }
+
+            // If we are going right-to-left, reverse the list for this level
+            if (!leftToRight) {
+                Collections.reverse(currentLevel);
+            }
+
+            result.add(currentLevel);
+
+            // Flip the flag for the next level
+            leftToRight = !leftToRight;
+        }
+
+        return result;
+    }
+
 
 
 
